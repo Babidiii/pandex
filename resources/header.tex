@@ -1,0 +1,16 @@
+\usepackage{fancyvrb,xcolor}
+
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\definecolor{Light}{HTML}{E4E4E4}
+
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{
+  \colorbox{Light}{\oldtexttt{#1}}
+}
+
+\usepackage{tcolorbox}
+\newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
+\renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
+
